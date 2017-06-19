@@ -11,7 +11,9 @@ class CreateTaskController @Inject()(val messagesApi: MessagesApi)
     with I18nSupport
     with TaskControllerSupport {
 
-  def index: Action[AnyContent] = ???
+  def index: Action[AnyContent] = Action { implicit request =>
+    Ok(views.html.create(form))
+  }
 
   def create: Action[AnyContent] = ???
 
