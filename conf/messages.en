@@ -1,0 +1,11 @@
+Id=Id
+Task=Task
+CreateTask=Create Task
+UpdateTask=Edit Task
+DeleteTask=Delete Task
+GetTasks=Tasks
+GetTask=Task Detail
+
+CreateTaskError=Task creation error
+UpdateTaskError=Task update error
+DeleteTaskError=Task deletion error
