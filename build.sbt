@@ -42,7 +42,8 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc"        %% "scalikejdbc-test"             % "2.5.2" % Test,
   "org.skinny-framework"   %% "skinny-orm"                   % "2.3.7",
   "org.scalikejdbc"        %% "scalikejdbc-play-initializer" % "2.5.+",
-  "ch.qos.logback"         % "logback-classic"               % "1.2.3"
+  "ch.qos.logback"         % "logback-classic"               % "1.2.3",
+  "mysql"                  % "mysql-connector-java"          % "6.0.6"
 )
 
 // Adds additional packages into Twirl
