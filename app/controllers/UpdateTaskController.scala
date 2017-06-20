@@ -16,7 +16,7 @@ class UpdateTaskController @Inject()(val messagesApi: MessagesApi)
 
   def index(taskId: Long): Action[AnyContent] = Action { implicit request =>
     val result     = Task.findById(taskId).get
-    val filledForm = form.fill(TaskForm(result.id, result.content))
+    val filledForm = form.fill(TaskForm(result.id, result.content, result.status.getOrElse("")))
     Ok(views.html.edit(filledForm))
   }
 
@@ -29,7 +29,8 @@ class UpdateTaskController @Inject()(val messagesApi: MessagesApi)
           val result = Task
             .updateById(model.id.get)
             .withAttributes(
-              'content -> model.content
+              'content -> model.content,
+              'status  -> model.status
             )
           if (result > 0) {
             Redirect(routes.GetTasksController.index())
