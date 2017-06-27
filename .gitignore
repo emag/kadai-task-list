@@ -5,5 +5,4 @@ target
 /.classpath
 /.project
 /.settings
-/RUNNING_PID
-env/
+/RUNNING_PIDK
